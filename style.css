@@ -19,17 +19,660 @@ button{font:inherit}
 nav{display:flex;gap:28px;font-size:10px;letter-spacing:.14em}
 nav a{color:#aaa;transition:.25s}nav a:hover{color:#fff}
 .menu-button{display:none;background:none;border:0;color:#fff;font-size:10px;letter-spacing:.12em}
-.hero{height:100vh;min-height:700px;position:relative;display:flex;align-items:center;padding:100px 7vw;overflow:hidden}
-.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:90px 90px;mask-image:radial-gradient(circle at 65% 50%,black,transparent 70%)}
-.hero:after{content:"";position:absolute;width:65vw;height:65vw;right:-25vw;top:-10vw;border:1px solid #333;border-radius:50%;box-shadow:0 0 0 90px #101010,0 0 0 91px #242424,0 0 0 220px #0d0d0d,0 0 0 221px #1b1b1b;opacity:.8}
-.hero-content{position:relative;z-index:2}
-.eyebrow,.section-label{font-size:10px;letter-spacing:.2em;color:var(--muted);font-weight:600}
-.hero h1{font-size:clamp(100px,22vw,300px);line-height:.75;margin:28px 0 35px;letter-spacing:-.09em;font-weight:800}
-.hero-copy{font-size:clamp(34px,5.8vw,88px);line-height:.93;letter-spacing:-.065em;font-weight:700;margin:0}
-.hero-copy span{color:#777}
-.hero-sub{margin-top:30px;font-size:11px;letter-spacing:.22em;color:#9a9a96}
-.scroll-note{position:absolute;bottom:35px;left:7vw;font-size:9px;letter-spacing:.16em;color:#777;z-index:2}.scroll-note span{margin-left:14px;color:#fff}
-.hero-number{position:absolute;right:7vw;bottom:35px;color:#555;font-size:10px;z-index:2}
+/* =========================================
+   RUI — PREMIUM HERO
+   ========================================= */
+
+.hero{
+  min-height:100svh;
+  height:100vh;
+  position:relative;
+  display:flex;
+  align-items:center;
+  padding:120px 7vw 90px;
+  overflow:hidden;
+  isolation:isolate;
+  background:
+    radial-gradient(
+      circle at 72% 42%,
+      rgba(175,205,235,.20),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 88% 80%,
+      rgba(255,255,255,.10),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #070809 0%,
+      #0c0e11 45%,
+      #15191d 100%
+    );
+}
+
+
+/* -----------------------------------------
+   Grid
+   ----------------------------------------- */
+
+.hero-grid{
+  position:absolute;
+  inset:0;
+  z-index:-5;
+
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,.045) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.045) 1px,
+      transparent 1px
+    );
+
+  background-size:80px 80px;
+
+  mask-image:
+    radial-gradient(
+      ellipse at 70% 50%,
+      black 0%,
+      rgba(0,0,0,.7) 35%,
+      transparent 75%
+    );
+}
+
+
+/* -----------------------------------------
+   光
+   ----------------------------------------- */
+
+.hero-light{
+  position:absolute;
+  width:70vw;
+  height:70vw;
+  max-width:1000px;
+  max-height:1000px;
+
+  right:-20vw;
+  top:50%;
+  transform:translateY(-50%);
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,255,255,.18) 0%,
+      rgba(190,215,240,.10) 22%,
+      rgba(120,160,200,.045) 42%,
+      transparent 70%
+    );
+
+  filter:blur(8px);
+
+  z-index:-4;
+
+  animation:heroLight 10s ease-in-out infinite alternate;
+}
+
+@keyframes heroLight{
+  0%{
+    transform:translateY(-50%) scale(.94);
+    opacity:.7;
+  }
+
+  100%{
+    transform:translateY(-50%) scale(1.06);
+    opacity:1;
+  }
+}
+
+
+/* -----------------------------------------
+   巨大なリング
+   ----------------------------------------- */
+
+.hero-orb{
+  position:absolute;
+  border-radius:50%;
+  pointer-events:none;
+  z-index:-3;
+}
+
+.hero-orb-one{
+  width:48vw;
+  height:48vw;
+  right:-10vw;
+  top:10vh;
+
+  border:1px solid rgba(255,255,255,.20);
+
+  box-shadow:
+    0 0 80px rgba(255,255,255,.035),
+    inset 0 0 80px rgba(255,255,255,.025);
+
+  animation:orbRotate 25s linear infinite;
+}
+
+.hero-orb-two{
+  width:36vw;
+  height:36vw;
+  right:-4vw;
+  top:17vh;
+
+  border:1px solid rgba(190,215,240,.22);
+
+  animation:orbRotateReverse 32s linear infinite;
+}
+
+.hero-orb-three{
+  width:24vw;
+  height:24vw;
+  right:4vw;
+  top:24vh;
+
+  border:1px solid rgba(255,255,255,.28);
+
+  box-shadow:
+    0 0 100px rgba(170,205,235,.10);
+}
+
+@keyframes orbRotate{
+  from{
+    transform:rotate(0deg);
+  }
+
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+@keyframes orbRotateReverse{
+  from{
+    transform:rotate(360deg);
+  }
+
+  to{
+    transform:rotate(0deg);
+  }
+}
+
+
+/* -----------------------------------------
+   ノイズ
+   ----------------------------------------- */
+
+.hero-noise{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  z-index:10;
+  opacity:.035;
+
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");
+}
+
+
+/* -----------------------------------------
+   メインコンテンツ
+   ----------------------------------------- */
+
+.hero-content{
+  position:relative;
+  z-index:5;
+  width:100%;
+  max-width:1400px;
+}
+
+
+/* -----------------------------------------
+   最上部
+   ----------------------------------------- */
+
+.hero-topline{
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  margin-bottom:38px;
+
+  font-size:9px;
+  letter-spacing:.18em;
+  color:rgba(255,255,255,.42);
+
+  text-transform:uppercase;
+}
+
+.hero-topline span:last-child{
+  color:rgba(255,255,255,.25);
+}
+
+
+/* -----------------------------------------
+   Eyebrow
+   ----------------------------------------- */
+
+.hero .eyebrow{
+  margin:0 0 22px;
+
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.20em;
+
+  color:#b8c4cf;
+}
+
+
+/* -----------------------------------------
+   RUI
+   ----------------------------------------- */
+
+.hero-name{
+  margin:0;
+
+  font-size:clamp(
+    130px,
+    22vw,
+    330px
+  );
+
+  line-height:.72;
+
+  letter-spacing:-.11em;
+
+  font-weight:800;
+
+  color:#f4f5f4;
+
+  text-shadow:
+    0 0 40px rgba(255,255,255,.04);
+
+  animation:heroNameIn 1.3s cubic-bezier(.16,1,.3,1) both;
+}
+
+.hero-name span{
+  color:#aebdca;
+  font-weight:500;
+}
+
+@keyframes heroNameIn{
+  from{
+    opacity:0;
+    transform:translateY(35px);
+    filter:blur(10px);
+  }
+
+  to{
+    opacity:1;
+    transform:none;
+    filter:blur(0);
+  }
+}
+
+
+/* -----------------------------------------
+   キャッチコピー
+   ----------------------------------------- */
+
+.hero-message{
+  display:flex;
+  align-items:flex-end;
+  gap:7vw;
+
+  margin-top:55px;
+}
+
+.hero-copy{
+  margin:0;
+
+  font-size:clamp(
+    38px,
+    5.7vw,
+    88px
+  );
+
+  line-height:.91;
+
+  letter-spacing:-.065em;
+
+  font-weight:700;
+
+  color:#f1f2f0;
+}
+
+.hero-copy span{
+  color:#8897a4;
+
+  background:
+    linear-gradient(
+      90deg,
+      #d9e0e5,
+      #8494a1
+    );
+
+  -webkit-background-clip:text;
+  background-clip:text;
+
+  -webkit-text-fill-color:transparent;
+}
+
+
+/* -----------------------------------------
+   日本語コピー
+   ----------------------------------------- */
+
+.hero-japanese{
+  margin:0 0 5px;
+
+  padding-left:28px;
+
+  border-left:1px solid rgba(255,255,255,.20);
+
+  font-family:
+    "Noto Sans JP",
+    sans-serif;
+
+  font-size:14px;
+
+  line-height:2;
+
+  letter-spacing:.10em;
+
+  color:#9fa7ad;
+}
+
+.hero-japanese strong{
+  color:#f1f2f0;
+  font-weight:500;
+}
+
+
+/* -----------------------------------------
+   下部
+   ----------------------------------------- */
+
+.hero-bottom{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+
+  margin-top:70px;
+
+  max-width:850px;
+}
+
+.hero-bottom p{
+  margin:0;
+
+  font-size:11px;
+  line-height:1.9;
+
+  letter-spacing:.08em;
+
+  color:#777f85;
+}
+
+
+/* -----------------------------------------
+   タグ
+   ----------------------------------------- */
+
+.hero-tags{
+  display:flex;
+  gap:7px;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+}
+
+.hero-tags span{
+  padding:8px 12px;
+
+  border:1px solid rgba(255,255,255,.12);
+
+  border-radius:100px;
+
+  font-size:8px;
+  letter-spacing:.14em;
+
+  color:#9da6ad;
+
+  background:rgba(255,255,255,.025);
+
+  backdrop-filter:blur(10px);
+}
+
+
+/* -----------------------------------------
+   SCROLL
+   ----------------------------------------- */
+
+.hero-side{
+  position:absolute;
+
+  left:7vw;
+  bottom:35px;
+
+  display:flex;
+  align-items:center;
+  gap:15px;
+
+  z-index:5;
+}
+
+.hero-side span{
+  font-size:8px;
+  letter-spacing:.20em;
+  color:#646b70;
+}
+
+.hero-side i{
+  display:block;
+
+  width:45px;
+  height:1px;
+
+  background:#555;
+
+  position:relative;
+}
+
+.hero-side i:after{
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  top:0;
+
+  width:18px;
+  height:1px;
+
+  background:#d7dce0;
+
+  animation:scrollLine 2s ease-in-out infinite;
+}
+
+@keyframes scrollLine{
+  0%,100%{
+    transform:translateX(0);
+  }
+
+  50%{
+    transform:translateX(27px);
+  }
+}
+
+
+/* -----------------------------------------
+   ページ番号
+   ----------------------------------------- */
+
+.hero-number{
+  position:absolute;
+
+  right:7vw;
+  bottom:35px;
+
+  font-size:9px;
+  letter-spacing:.15em;
+
+  color:#555d62;
+
+  z-index:5;
+}
+
+
+/* -----------------------------------------
+   マウスの光
+   ----------------------------------------- */
+
+.cursor-glow{
+  position:fixed;
+
+  width:360px;
+  height:360px;
+
+  border-radius:50%;
+
+  pointer-events:none;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(210,225,240,.07),
+      transparent 68%
+    );
+
+  transform:translate(-50%,-50%);
+
+  z-index:50;
+
+  mix-blend-mode:screen;
+}
+
+
+/* -----------------------------------------
+   スマホ
+   ----------------------------------------- */
+
+@media(max-width:850px){
+
+  .hero{
+    min-height:100svh;
+    height:auto;
+
+    padding:
+      105px
+      7vw
+      85px;
+
+    align-items:flex-start;
+  }
+
+  .hero-topline{
+    margin-bottom:45px;
+
+    font-size:7px;
+
+    gap:20px;
+  }
+
+  .hero-topline span:last-child{
+    display:none;
+  }
+
+  .hero .eyebrow{
+    font-size:8px;
+    margin-bottom:25px;
+  }
+
+  .hero-name{
+    font-size:29vw;
+    line-height:.75;
+  }
+
+  .hero-message{
+    display:block;
+    margin-top:45px;
+  }
+
+  .hero-copy{
+    font-size:13vw;
+    line-height:.9;
+  }
+
+  .hero-japanese{
+    margin-top:35px;
+    padding-left:18px;
+
+    font-size:12px;
+    line-height:1.9;
+  }
+
+  .hero-bottom{
+    display:block;
+    margin-top:55px;
+  }
+
+  .hero-bottom p{
+    font-size:10px;
+  }
+
+  .hero-tags{
+    justify-content:flex-start;
+    margin-top:22px;
+  }
+
+  .hero-tags span{
+    font-size:7px;
+    padding:7px 10px;
+  }
+
+  .hero-orb-one{
+    width:110vw;
+    height:110vw;
+
+    right:-65vw;
+    top:20vh;
+  }
+
+  .hero-orb-two{
+    width:85vw;
+    height:85vw;
+
+    right:-45vw;
+    top:25vh;
+  }
+
+  .hero-orb-three{
+    width:60vw;
+    height:60vw;
+
+    right:-20vw;
+    top:32vh;
+  }
+
+  .hero-light{
+    width:130vw;
+    height:130vw;
+
+    right:-80vw;
+    top:48%;
+  }
+
+  .hero-side{
+    bottom:28px;
+    left:7vw;
+  }
+
+  .hero-number{
+    right:7vw;
+    bottom:28px;
+  }
+}
 .section{max-width:var(--max);margin:auto;padding:150px 7vw}
 .statement{min-height:760px;display:grid;grid-template-columns:1fr 2fr;gap:5vw;align-content:center;border-top:1px solid var(--line)}
 .statement-text{font-size:clamp(48px,7vw,100px);font-weight:700;letter-spacing:-.07em;line-height:1.05}
