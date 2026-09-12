@@ -3,225 +3,704 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="AI × WEB × ITを起点に、新しいサービスとブランドをつくるRUIのパーソナルブランドサイト。">
-  <title>RUI — Building What's Next.</title>
+
+  <meta
+    name="description"
+    content="RUIはAI・WEB・ITを活用し、業務効率化、WEB制作、デジタルサービス開発を支援します。"
+  >
+
+  <title>RUI | AI・WEB・IT BUSINESS</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div class="cursor-glow"></div>
+
+  <!-- ==============================
+       HEADER
+  ============================== -->
 
   <header class="site-header">
-    <a class="logo" href="#top">RUI<span>.</span></a>
-    <nav>
-      <a href="#about">ABOUT</a>
-      <a href="#vision">VISION</a>
-      <a href="#business">BUSINESS</a>
-      <a href="#projects">PROJECTS</a>
-      <a href="#journal">JOURNAL</a>
-      <a href="#contact">CONTACT</a>
+
+    <a href="#top" class="logo">
+      RUI<span>.</span>
+    </a>
+
+    <nav class="main-nav">
+      <a href="#services">サービス</a>
+      <a href="#about">RUIについて</a>
+      <a href="#projects">プロジェクト</a>
+      <a href="#process">進め方</a>
+      <a href="#contact">お問い合わせ</a>
     </nav>
-    <button class="menu-button" aria-label="メニュー">MENU</button>
+
+    <a href="#contact" class="header-button">
+      相談する
+      <span>→</span>
+    </a>
+
+    <button class="menu-button" aria-label="メニュー">
+      MENU
+    </button>
+
   </header>
 
+
   <main id="top">
-<section class="hero">
 
-  <div class="hero-bg">
-    <div class="hero-glow"></div>
-    <div class="hero-circle"></div>
-  </div>
+    <!-- ==============================
+         HERO
+    ============================== -->
 
-  <div class="hero-content">
+    <section class="hero">
 
-    <div class="hero-label">
-      <span>RUI</span>
-      <span>PERSONAL BRAND / 2026</span>
-    </div>
+      <div class="hero-background">
+        <div class="hero-shape hero-shape-1"></div>
+        <div class="hero-shape hero-shape-2"></div>
+      </div>
 
-    <div class="hero-main">
+      <div class="container hero-container">
 
-      <p class="hero-kicker">
-        AI / WEB / IT / BUSINESS
-      </p>
+        <div class="hero-content">
 
-      <h1>
-        RUI<span>.</span>
-      </h1>
+          <p class="hero-label">
+            RUI / AI × WEB × IT
+          </p>
 
-      <div class="hero-copy">
+          <h1>
+            仕事を、<br>
+            <span>もっとスマートに。</span>
+          </h1>
+
+          <p class="hero-lead">
+            AI・WEB・ITを活用して、<br>
+            面倒な仕事を効率化し、新しいサービスを形にする。
+          </p>
+
+          <div class="hero-actions">
+
+            <a href="#services" class="button button-primary">
+              サービスを見る
+              <span>→</span>
+            </a>
+
+            <a href="#contact" class="button button-secondary">
+              まず相談する
+              <span>→</span>
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="hero-card">
+
+          <div class="hero-card-top">
+            <span>WHAT I DO</span>
+            <span>01</span>
+          </div>
+
+          <div class="hero-card-main">
+
+            <div>
+              <small>AI</small>
+              <strong>業務効率化</strong>
+            </div>
+
+            <div>
+              <small>WEB</small>
+              <strong>サイト・サービス制作</strong>
+            </div>
+
+            <div>
+              <small>IT</small>
+              <strong>デジタル化支援</strong>
+            </div>
+
+          </div>
+
+          <div class="hero-card-bottom">
+            AI × HUMAN
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="hero-scroll">
+        SCROLL
+        <span></span>
+      </div>
+
+    </section>
+
+
+    <!-- ==============================
+         INTRO
+    ============================== -->
+
+    <section class="intro section">
+
+      <div class="container">
+
+        <div class="section-label">
+          RUIとは
+        </div>
+
+        <div class="intro-grid">
+
+          <h2>
+            アイデアを、<br>
+            <span>実際の形へ。</span>
+          </h2>
+
+          <div class="intro-text">
+
+            <p class="large">
+              「こんなサービスがあったらいい」
+              「この作業をもっと楽にしたい」
+            </p>
+
+            <p>
+              RUIは、AI・WEB・ITを活用して、
+              企業や個人が抱える課題を整理し、
+              実際に使える仕組みやサービスへ
+              変えていくことを目指しています。
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==============================
+         SERVICES
+    ============================== -->
+
+    <section id="services" class="services section">
+
+      <div class="container">
+
+        <div class="section-head">
+
+          <div>
+            <div class="section-label">
+              SERVICES
+            </div>
+
+            <h2>
+              できること
+            </h2>
+          </div>
+
+          <p>
+            AIとWEBを活用して、<br>
+            「時間」「手間」「コスト」の削減を支援します。
+          </p>
+
+        </div>
+
+
+        <div class="service-grid">
+
+          <article class="service-card">
+
+            <div class="service-number">
+              01
+            </div>
+
+            <div class="service-icon">
+              AI
+            </div>
+
+            <h3>
+              AI業務支援
+            </h3>
+
+            <p>
+              文章作成、情報整理、資料作成、
+              リサーチなど、AIを活用して
+              面倒な業務を効率化します。
+            </p>
+
+            <ul>
+              <li>文章・資料作成</li>
+              <li>情報収集・整理</li>
+              <li>AI活用の業務改善</li>
+            </ul>
+
+            <a href="#contact" class="card-link">
+              このサービスについて相談する
+              <span>→</span>
+            </a>
+
+          </article>
+
+
+          <article class="service-card featured">
+
+            <div class="service-number">
+              02
+            </div>
+
+            <div class="service-icon">
+              WEB
+            </div>
+
+            <h3>
+              WEB制作・開発
+            </h3>
+
+            <p>
+              企業サイト、サービスサイト、
+              ランディングページなど、
+              目的に合わせたWEB制作を行います。
+            </p>
+
+            <ul>
+              <li>企業・店舗サイト</li>
+              <li>サービスサイト</li>
+              <li>WEBサービス</li>
+            </ul>
+
+            <a href="#contact" class="card-link">
+              WEB制作について相談する
+              <span>→</span>
+            </a>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <div class="service-number">
+              03
+            </div>
+
+            <div class="service-icon">
+              IT
+            </div>
+
+            <h3>
+              IT・デジタル化支援
+            </h3>
+
+            <p>
+              アナログな業務を見直し、
+              デジタルツールやAIを活用した
+              効率的な仕組みづくりを考えます。
+            </p>
+
+            <ul>
+              <li>業務フロー改善</li>
+              <li>ツール導入支援</li>
+              <li>デジタル化の相談</li>
+            </ul>
+
+            <a href="#contact" class="card-link">
+              ITについて相談する
+              <span>→</span>
+            </a>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==============================
+         ABOUT
+    ============================== -->
+
+    <section id="about" class="about section">
+
+      <div class="container">
+
+        <div class="section-label">
+          ABOUT RUI
+        </div>
+
+        <div class="about-grid">
+
+          <h2>
+            TECHNOLOGY<br>
+            <span>WITH PURPOSE.</span>
+          </h2>
+
+          <div class="about-content">
+
+            <p class="about-lead">
+              技術を使うことが目的ではない。<br>
+              誰かの仕事や生活を、より良くすることが目的。
+            </p>
+
+            <p>
+              AIやWEBなどの技術は、
+              あくまで問題を解決するための手段です。
+            </p>
+
+            <p>
+              RUIでは「何を作るか」だけではなく、
+              「なぜ作るのか」「誰のためなのか」まで考え、
+              アイデアを具体的な形へ落とし込みます。
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==============================
+         WHY
+    ============================== -->
+
+    <section class="why section">
+
+      <div class="container">
+
+        <div class="section-label">
+          WHY RUI
+        </div>
+
         <h2>
-          BUILDING<br>
-          <span>WHAT'S NEXT.</span>
+          AIだけでは、<br>
+          <span>仕事は変わらない。</span>
         </h2>
 
-        <p>
-          まだ存在しないものを、つくる。
-        </p>
-      </div>
+        <div class="why-grid">
 
-    </div>
+          <article>
+            <strong>01</strong>
+            <h3>課題を整理する</h3>
+            <p>
+              何が問題なのかを整理し、
+              本当に必要なことを見つけます。
+            </p>
+          </article>
 
-    <div class="hero-footer">
+          <article>
+            <strong>02</strong>
+            <h3>最適な方法を考える</h3>
+            <p>
+              AI・WEB・ITなどから、
+              目的に合った方法を選びます。
+            </p>
+          </article>
 
-      <p>
-        AI、WEB、ITを起点に。<br>
-        新しいサービス、事業、ブランドを。
-      </p>
+          <article>
+            <strong>03</strong>
+            <h3>実際に形にする</h3>
+            <p>
+              アイデアだけで終わらせず、
+              実際に使えるサービスや仕組みにします。
+            </p>
+          </article>
 
-      <a href="#about" class="hero-button">
-        EXPLORE
-        <span>→</span>
-      </a>
-
-    </div>
-
-  </div>
-
-  <div class="hero-index">
-    <span>01</span>
-    <i></i>
-    <span>08</span>
-  </div>
-
-</section>
-
-    <section class="statement section">
-      <p class="section-label">01 — STATEMENT</p>
-      <div class="statement-text reveal">
-        <p>まだ存在しないものを、</p>
-        <p><em>つくる。</em></p>
-      </div>
-      <p class="section-description reveal">
-        AI、WEB、ITを起点に、<br>
-        新しいサービス・事業・ブランドを形にしていく。
-      </p>
-    </section>
-
-    <section id="about" class="section about">
-      <div class="section-heading">
-        <p class="section-label">02 — ABOUT</p>
-        <h2>WHO<br><span>IS RUI?</span></h2>
-      </div>
-      <div class="about-copy reveal">
-        <p class="lead">Technology is not the destination.<br>It is the tool to create something bigger.</p>
-        <p>
-          一つの分野だけに留まらず、テクノロジー、ビジネス、ブランドを横断しながら、
-          「次に必要とされるもの」を考え、実際に形にしていく。
-        </p>
-        <p>
-          今は一人。だからこそ、最初の一歩からすべてを積み上げる。
-        </p>
-      </div>
-    </section>
-
-    <section id="vision" class="section vision">
-      <p class="section-label">03 — VISION</p>
-      <div class="vision-title reveal">
-        <h2>FROM ONE IDEA<br>TO SOMETHING <span>BIGGER.</span></h2>
-      </div>
-      <div class="vision-map">
-        <div class="vision-item active"><span>01</span><strong>AI / IT</strong><small>NOW</small></div>
-        <div class="line"></div>
-        <div class="vision-item"><span>02</span><strong>WEB</strong><small>BUILDING</small></div>
-        <div class="line"></div>
-        <div class="vision-item"><span>03</span><strong>MARKETING</strong><small>FUTURE</small></div>
-        <div class="line"></div>
-        <div class="vision-item"><span>04</span><strong>BRAND</strong><small>FUTURE</small></div>
-        <div class="line"></div>
-        <div class="vision-item"><span>05</span><strong>BEAUTY / MEDICAL</strong><small>FUTURE</small></div>
-        <div class="line"></div>
-        <div class="vision-item"><span>06</span><strong>ENTERTAINMENT</strong><small>FUTURE</small></div>
-      </div>
-    </section>
-
-    <section id="business" class="section business">
-      <div class="section-heading">
-        <p class="section-label">04 — BUSINESS</p>
-        <h2>WHAT<br><span>I BUILD.</span></h2>
-      </div>
-      <div class="business-list">
-        <article class="business-card reveal">
-          <span>01</span>
-          <div><h3>AI BUSINESS SUPPORT</h3><p>AIを活用した仕事代行・業務支援。面倒な仕事を、AIと人間の力で効率化する。</p></div>
-          <b>↗</b>
-        </article>
-        <article class="business-card reveal">
-          <span>02</span>
-          <div><h3>WEB / IT</h3><p>WEB制作、WEB運用、IT・DXなど、企業のデジタル基盤をつくる。</p></div>
-          <b>↗</b>
-        </article>
-        <article class="business-card reveal">
-          <span>03</span>
-          <div><h3>FUTURE BUSINESS</h3><p>マーケティング、ブランド、美容、医療、エンターテインメント。未来の事業領域。</p></div>
-          <b>↗</b>
-        </article>
-      </div>
-    </section>
-
-    <section id="projects" class="section projects">
-      <p class="section-label">05 — PROJECTS</p>
-      <div class="projects-intro">
-        <h2>PROJECTS<br><span>IN PROGRESS.</span></h2>
-        <p>現在進行中のプロジェクト。ここから実績を積み上げていく。</p>
-      </div>
-      <div class="project-grid">
-        <article class="project-card featured reveal">
-          <div class="project-image abstract-one"><span>AI</span></div>
-          <div class="project-meta"><span>PROJECT 01</span><span>BUILDING</span></div>
-          <h3>AI BUSINESS SUPPORT</h3>
-          <p>AI × 人間による業務支援サービス。</p>
-        </article>
-        <article class="project-card reveal">
-          <div class="project-image abstract-two"><span>WEB</span></div>
-          <div class="project-meta"><span>PROJECT 02</span><span>BUILDING</span></div>
-          <h3>WEB / IT</h3>
-          <p>デジタルサービスの企画・制作。</p>
-        </article>
-        <article class="project-card reveal">
-          <div class="project-image abstract-three"><span>BRAND</span></div>
-          <div class="project-meta"><span>PROJECT 03</span><span>FUTURE</span></div>
-          <h3>PERSONAL BRAND</h3>
-          <p>個人ブランドから未来の事業へ。</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="journal" class="section journal">
-      <div class="section-heading">
-        <p class="section-label">06 — JOURNAL</p>
-        <h2>BUILD<br><span>LOG.</span></h2>
-      </div>
-      <div class="journal-list">
-        <article><time>2026.09.12</time><span>PERSONAL BRAND PROJECT STARTED.</span><b>01</b></article>
-        <article><time>2026.09</time><span>AI × WEB × IT BUSINESS CONCEPT.</span><b>02</b></article>
-        <article><time>COMING SOON</time><span>FIRST SERVICE / FIRST CLIENT.</span><b>03</b></article>
-      </div>
-    </section>
-
-    <section class="future section">
-      <div class="future-inner reveal">
-        <p class="section-label">07 — FUTURE</p>
-        <h2>THE FUTURE<br>IS <span>BIGGER.</span></h2>
-        <div class="future-tags">
-          <span>AI</span><span>IT</span><span>WEB</span><span>MARKETING</span>
-          <span>BRAND</span><span>BEAUTY</span><span>MEDICAL</span><span>ENTERTAINMENT</span>
         </div>
+
       </div>
+
     </section>
+
+
+    <!-- ==============================
+         PROJECTS
+    ============================== -->
+
+    <section id="projects" class="projects section">
+
+      <div class="container">
+
+        <div class="section-head">
+
+          <div>
+
+            <div class="section-label">
+              PROJECTS
+            </div>
+
+            <h2>
+              プロジェクト
+            </h2>
+
+          </div>
+
+          <p>
+            RUIが現在取り組んでいる<br>
+            サービス・プロジェクト。
+          </p>
+
+        </div>
+
+
+        <div class="project-list">
+
+          <article class="project">
+
+            <div class="project-image">
+              <span>AI</span>
+            </div>
+
+            <div class="project-info">
+
+              <div class="project-meta">
+                PROJECT 01
+                <span>IN PROGRESS</span>
+              </div>
+
+              <h3>
+                AI BUSINESS SUPPORT
+              </h3>
+
+              <p>
+                AIを活用した仕事代行・
+                業務支援サービス。
+              </p>
+
+              <a href="#contact" class="text-link">
+                プロジェクトについて
+                <span>→</span>
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <article class="project">
+
+            <div class="project-image project-web">
+              <span>WEB</span>
+            </div>
+
+            <div class="project-info">
+
+              <div class="project-meta">
+                PROJECT 02
+                <span>BUILDING</span>
+              </div>
+
+              <h3>
+                WEB / IT SERVICE
+              </h3>
+
+              <p>
+                デジタルサービスの企画・制作。
+              </p>
+
+              <a href="#contact" class="text-link">
+                プロジェクトについて
+                <span>→</span>
+              </a>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==============================
+         PROCESS
+    ============================== -->
+
+    <section id="process" class="process section">
+
+      <div class="container">
+
+        <div class="section-label">
+          PROCESS
+        </div>
+
+        <div class="process-head">
+
+          <h2>
+            依頼から完成まで
+          </h2>
+
+          <p>
+            難しいことは必要ありません。<br>
+            まずは相談から始めます。
+          </p>
+
+        </div>
+
+
+        <div class="process-list">
+
+          <article>
+            <span>01</span>
+            <div>
+              <h3>相談</h3>
+              <p>
+                やりたいこと、困っていることを
+                お聞かせください。
+              </p>
+            </div>
+          </article>
+
+          <article>
+            <span>02</span>
+            <div>
+              <h3>課題整理</h3>
+              <p>
+                目的や課題を整理して、
+                必要なことを明確にします。
+              </p>
+            </div>
+          </article>
+
+          <article>
+            <span>03</span>
+            <div>
+              <h3>提案・制作</h3>
+              <p>
+                最適な方法を考え、
+                実際の形へ落とし込みます。
+              </p>
+            </div>
+          </article>
+
+          <article>
+            <span>04</span>
+            <div>
+              <h3>改善</h3>
+              <p>
+                公開して終わりではなく、
+                より良い状態を目指します。
+              </p>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==============================
+         VISION
+    ============================== -->
+
+    <section class="vision section">
+
+      <div class="container">
+
+        <div class="section-label">
+          VISION
+        </div>
+
+        <div class="vision-content">
+
+          <h2>
+            ONE IDEA.<br>
+            <span>SOMETHING BIGGER.</span>
+          </h2>
+
+          <p>
+            AI・WEB・ITから始まり、
+            マーケティング、ブランド、
+            新しいサービスへ。
+          </p>
+
+          <p>
+            小さなアイデアを積み重ね、
+            将来的には社会に大きな価値を
+            生み出す事業をつくる。
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==============================
+         CONTACT
+    ============================== -->
 
     <section id="contact" class="contact section">
-      <p class="section-label">08 — CONTACT</p>
-      <h2>LET'S BUILD<br><span>SOMETHING.</span></h2>
-      <p>仕事・プロジェクト・コラボレーションについて。</p>
-      <a class="contact-button" href="mailto:hello@example.com">CONTACT <span>↗</span></a>
+
+      <div class="container">
+
+        <div class="contact-box">
+
+          <div class="section-label">
+            CONTACT
+          </div>
+
+          <h2>
+            まずは、<br>
+            <span>話しましょう。</span>
+          </h2>
+
+          <p>
+            WEB制作、AI活用、業務効率化、<br>
+            新しいサービスについての相談など。
+          </p>
+
+          <a
+            href="mailto:hello@example.com"
+            class="contact-button"
+          >
+            相談・お問い合わせ
+            <span>→</span>
+          </a>
+
+          <small>
+            ※現在お問い合わせ窓口を準備中です。
+          </small>
+
+        </div>
+
+      </div>
+
     </section>
+
   </main>
 
+
+  <!-- ==============================
+       FOOTER
+  ============================== -->
+
   <footer>
-    <div><span>RUI.</span><small>PERSONAL BRAND</small></div>
-    <p>© 2026 RUI. ALL RIGHTS RESERVED.</p>
+
+    <div class="container footer-inner">
+
+      <div>
+        <strong>RUI.</strong>
+        <span>AI / WEB / IT BUSINESS</span>
+      </div>
+
+      <p>
+        © 2026 RUI. ALL RIGHTS RESERVED.
+      </p>
+
+    </div>
+
   </footer>
 
+
   <script src="script.js"></script>
+
 </body>
 </html>
