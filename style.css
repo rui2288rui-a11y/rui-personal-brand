@@ -705,3 +705,408 @@ footer{border-top:1px solid var(--line);padding:35px 7vw;display:flex;justify-co
   .journal article{grid-template-columns:90px 1fr 20px;font-size:9px}
   footer{display:block}footer p{margin-top:25px}
 }
+/* =====================================================
+   RUI — NEW PREMIUM HERO
+   ===================================================== */
+
+.hero{
+  position:relative;
+  min-height:100svh;
+  height:100vh;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  background:
+    radial-gradient(
+      circle at 78% 42%,
+      rgba(205,214,222,.75) 0%,
+      rgba(205,214,222,.25) 18%,
+      transparent 42%
+    ),
+    linear-gradient(
+      120deg,
+      #f7f7f5 0%,
+      #eeeeeb 48%,
+      #d9dde0 100%
+    );
+  color:#111;
+}
+
+/* 背景 */
+
+.hero-bg{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  overflow:hidden;
+}
+
+.hero-glow{
+  position:absolute;
+  width:55vw;
+  height:55vw;
+  right:-12vw;
+  top:50%;
+  transform:translateY(-50%);
+  border-radius:50%;
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,255,255,.95) 0%,
+      rgba(255,255,255,.55) 28%,
+      rgba(255,255,255,0) 70%
+    );
+  filter:blur(3px);
+}
+
+.hero-circle{
+  position:absolute;
+  width:48vw;
+  height:48vw;
+  max-width:760px;
+  max-height:760px;
+  right:-5vw;
+  top:50%;
+  transform:translateY(-50%);
+  border-radius:50%;
+  border:1px solid rgba(30,35,40,.12);
+  box-shadow:
+    0 0 0 70px rgba(255,255,255,.08),
+    0 0 0 140px rgba(30,35,40,.035);
+}
+
+/* コンテンツ */
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  width:100%;
+  max-width:1400px;
+  margin:0 auto;
+  padding:0 7vw;
+}
+
+/* 最上部 */
+
+.hero-label{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:65px;
+  padding-bottom:16px;
+  border-bottom:1px solid rgba(20,20,20,.14);
+
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:.16em;
+  color:#555;
+}
+
+.hero-label span:first-child{
+  color:#111;
+  font-weight:800;
+  font-size:13px;
+  letter-spacing:.04em;
+}
+
+/* メイン */
+
+.hero-main{
+  max-width:1050px;
+}
+
+.hero-kicker{
+  margin:0 0 24px;
+
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:.16em;
+  color:#666;
+}
+
+.hero-main h1{
+  margin:0;
+
+  font-family:
+    Inter,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  font-size:clamp(110px,16vw,220px);
+  line-height:.78;
+  letter-spacing:-.09em;
+  font-weight:800;
+
+  color:#111;
+}
+
+.hero-main h1 span{
+  color:#89939a;
+  font-weight:400;
+}
+
+/* キャッチコピー */
+
+.hero-copy{
+  margin-top:58px;
+
+  display:flex;
+  align-items:flex-end;
+  gap:70px;
+}
+
+.hero-copy h2{
+  margin:0;
+
+  font-family:
+    Inter,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  font-size:clamp(42px,5vw,72px);
+  line-height:.95;
+  letter-spacing:-.055em;
+  font-weight:700;
+
+  color:#111;
+}
+
+.hero-copy h2 span{
+  color:#7d878e;
+}
+
+.hero-copy p{
+  margin:0 0 4px;
+  padding-left:24px;
+
+  border-left:1px solid rgba(20,20,20,.25);
+
+  font-family:
+    "Noto Sans JP",
+    sans-serif;
+
+  font-size:16px;
+  line-height:1.8;
+  letter-spacing:.08em;
+
+  color:#555;
+}
+
+.hero-copy p::first-line{
+  color:#222;
+}
+
+/* 下部 */
+
+.hero-footer{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+
+  max-width:1050px;
+
+  margin-top:75px;
+}
+
+.hero-footer p{
+  margin:0;
+
+  font-family:
+    "Noto Sans JP",
+    sans-serif;
+
+  font-size:12px;
+  line-height:1.9;
+  letter-spacing:.08em;
+
+  color:#666;
+}
+
+/* ボタン */
+
+.hero-button{
+  display:flex;
+  align-items:center;
+  gap:35px;
+
+  padding:15px 0;
+
+  border-bottom:1px solid #333;
+
+  font-family:
+    Inter,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:.18em;
+
+  color:#111;
+
+  transition:
+    gap .35s ease,
+    color .35s ease;
+}
+
+.hero-button span{
+  font-size:17px;
+  font-weight:400;
+}
+
+.hero-button:hover{
+  gap:50px;
+  color:#666;
+}
+
+/* ページ番号 */
+
+.hero-index{
+  position:absolute;
+  right:7vw;
+  bottom:40px;
+
+  display:flex;
+  align-items:center;
+  gap:12px;
+
+  font-family:
+    Inter,
+    sans-serif;
+
+  font-size:9px;
+  letter-spacing:.15em;
+
+  color:#777;
+
+  z-index:5;
+}
+
+.hero-index i{
+  display:block;
+  width:35px;
+  height:1px;
+  background:#999;
+}
+
+/* 既存の装飾を無効化 */
+
+.hero-noise,
+.hero-grid,
+.hero-orb,
+.hero-light,
+.hero-side{
+  display:none;
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media(max-width:850px){
+
+  .hero{
+    min-height:100svh;
+    height:auto;
+    padding:110px 7vw 85px;
+    align-items:flex-start;
+  }
+
+  .hero-content{
+    padding:0;
+  }
+
+  .hero-label{
+    margin-bottom:55px;
+    font-size:8px;
+  }
+
+  .hero-label span:last-child{
+    display:none;
+  }
+
+  .hero-label span:first-child{
+    font-size:12px;
+  }
+
+  .hero-kicker{
+    font-size:9px;
+    margin-bottom:25px;
+  }
+
+  .hero-main h1{
+    font-size:27vw;
+    line-height:.78;
+  }
+
+  .hero-copy{
+    display:block;
+    margin-top:48px;
+  }
+
+  .hero-copy h2{
+    font-size:13vw;
+    line-height:.92;
+  }
+
+  .hero-copy p{
+    margin-top:30px;
+    padding-left:18px;
+    font-size:13px;
+    line-height:1.9;
+  }
+
+  .hero-footer{
+    display:block;
+    margin-top:55px;
+  }
+
+  .hero-footer p{
+    font-size:10px;
+  }
+
+  .hero-button{
+    display:inline-flex;
+    margin-top:32px;
+  }
+
+  .hero-circle{
+    width:100vw;
+    height:100vw;
+    right:-55vw;
+    top:52%;
+  }
+
+  .hero-glow{
+    width:120vw;
+    height:120vw;
+    right:-75vw;
+    top:52%;
+  }
+
+  .hero-index{
+    right:7vw;
+    bottom:25px;
+  }
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+   ===================================================== */
+
+@media(prefers-reduced-motion:reduce){
+
+  *,
+  *::before,
+  *::after{
+    animation:none !important;
+    transition:none !important;
+    scroll-behavior:auto !important;
+  }
+
+}
